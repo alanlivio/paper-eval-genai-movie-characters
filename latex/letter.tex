@@ -1,0 +1,105 @@
+%!TEX program = xetex
+\documentclass[10pt,a4paper,sans,colorlinks]{moderncv}
+
+\usepackage{lmodern}
+\usepackage{blindtext}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{acronym}
+\usepackage{url}
+\usepackage{array}
+
+\newcommand{\ie}[0]{\textit{i.e.},~}
+\newcommand{\eg}[0]{\textit{e.g.},~}
+\newcommand{\etal}[0]{\textit{et al.}~}
+\newcommand\setEnumItemNoSep{
+    \usepackage{enumitem}
+    \setlist[itemize]{noitemsep, nosep, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt, leftmargin=*,rightmargin=0pt}
+    \setlist[enumerate]{noitemsep, nosep, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt, leftmargin=*,rightmargin=0pt}
+}
+\newcommand\setItemizeUseHyphen{
+    \usepackage{enumitem}
+    \def\labelitemi{-}
+}
+\newcommand\setLargeGeometry{
+    \usepackage[a4paper, left=20mm, top=20mm]{geometry}
+}
+\newcommand\setParagraphReducedSpacing{
+    \linespread{1}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+}
+\usepackage{footmisc}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\name{Alan}{Guedes}
+\email{a.guedes@reading.ac.uk}
+\homepage{alanlivio.github.io}
+\collectionadd[github]{socials}{\protect\httpslink[github]{github.com/alanlivio}}
+\collectionadd[homepage]{socials}{\protect\httpslink[web]{alanlivio.github.io}}
+\usepackage{float}
+\newfloat{figure}{htbp}{figs}
+\newfloat{table}{htbp}{figs}
+\newcommand\setHyperrefBlueLinks{
+    \definecolor{links}{HTML}{2A1B81}
+    \hypersetup{
+        urlcolor=links,
+        linkcolor=links,
+        citecolor=links
+    }
+}
+\usepackage{soul}
+\setLargeGeometry
+\setItemizeUseHyphen
+\setEnumItemNoSep
+\nopagenumbers{}
+\setParagraphReducedSpacing
+\newacro{ML}{Machine Learning}
+\newacro{MMSys}{Multimedia Systems}
+\newacro{LLM}{Large Language Models}
+\usepackage{etoolbox}
+
+\begin{document}
+
+\title{Cover Letter}
+\setHyperrefBlueLinks
+\recipient{Editors of AI \& SOCIETY}{Springer}
+\opening{Dear Editors,}
+\date{\today}
+
+\makeatletter
+\renewcommand*{\makeletterclosing}{%
+  \par\addvspace{2.5em}%
+  {\bfseries\@closing}%
+  \par}
+\makeatother
+
+\closing{Sincerely,\\
+\vspace{1.5em}
+\textbf{Alan Guedes}\\
+Lecturer in Computer Science\\
+Department of Computer Science\\
+University of Reading\\
+Email: \url{a.guedes@reading.ac.uk}}
+
+\makelettertitle
+\justify
+
+I am writing to submit my manuscript titled ``Evaluation and Societal Discussion of Emotion Fidelity of AI-generated Human Avatars'' for consideration for publication in the \textit{AI \& SOCIETY} Special Issue on ``Responsible Use of AI in Art Creation and Archival Practice.'' This submission is formatted in accordance with the Springer Nature LaTeX author support guidelines\footnote{\url{https://www.springernature.com/gp/authors/campaigns/latex-author-support}}. 
+
+As a Lecturer in Computer Science, Co-director of the Digital Interdisciplinary Centre of Digital Humanities\footnote{\url{https://research.reading.ac.uk/digitalhumanities/}}, and a member of the Synthetic Media Research Network\footnote{\url{https://research.reading.ac.uk/synthetic-media-research-network/}} at the University of Reading, my work focuses on the intersection of technological systems and creative practices. I believe that this multidisciplinary study, which examines the performance capabilities and limits of modern generative models, aligns closely with the scope and values of this special issue.
+
+Grounded in the context of recent discussions surrounding digital likeness and performance rights (such as the 2023 SAG-AFTRA strikes\footnote{\url{https://www.sagaftrastrike.org}}), my study explores whether current text-to-video (T2V) and audio-driven pipelines can replicate the subtle nuances of human acting. Through a structured focus group session conducted with film and television academics and student researchers at the University of Reading, I qualitatively evaluate the outputs of models like Wan 2.1, Hunyuan-Video, and Runway.
+
+My observations suggest a noticeable gap between high aesthetic visual quality and actual performance fidelity. In particular, I discuss potential limitations in expressing complex human emotions, such as the lack of Duchenne smile characteristics (resulting in emotional flattening), temporal and facial warping under high emotional intensity, and cross-modal disconnections between speech audio and upper facial expressions. I also touch upon the surrounding policy, legal, and ethical landscapes, including the current fragmentation of digital likeness rights in the UK and risks associated with procurement and contract buy-out clauses.
+
+I hope that by highlighting these practical limitations and discussing human-centric frameworks, my study can contribute to the ongoing dialogue surrounding responsible AI in art creation and archival practice. All generated evaluation videos, prompts, and code from this study are publicly hosted on the project website at \url{https://alanlivio.github.io/paper-eval-genai-movie-characters}.
+
+Thank you for your time and consideration.
+
+\makeletterclosing
+\end{document}

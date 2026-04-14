@@ -1,0 +1,29 @@
+[project]
+site_name = "Evaluation and Societal Discussion of Emotion Fidelity of AI-generated Human Avatars"
+site_author = "Alan Guedes"
+copyright = "Copyright &copy; 2026 The authors"
+extra_css = ["stylesheets/extra.css"]
+
+[project.theme]
+custom_dir = "overrides"
+features = ["content.code.copy", "content.code.select"]
+
+[project.theme.icon]
+logo = "lucide/flask-conical"
+
+[project.theme.font]
+text = "Noto Sans"
+code = "JetBrains Mono"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[project.plugins.search]
+enabled = false
