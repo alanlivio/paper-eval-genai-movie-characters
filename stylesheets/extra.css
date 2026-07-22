@@ -1,0 +1,123 @@
+/* Hide native H1 title from Markdown to avoid duplication */
+article.md-content__inner>h1:first-of-type {
+  display: none !important;
+}
+
+/* Academic Header Styling */
+.academic-header {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 3.5rem !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
+}
+
+.academic-title {
+  font-size: 2.25rem !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.025em;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.academic-description {
+  font-size: 1.25rem !important;
+  color: #a1a1aa !important;
+  /* zinc-400 */
+  max-width: 800px !important;
+  margin: 0 auto 1.5rem auto !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+}
+
+.academic-authors {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 2.5rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  width: 100% !important;
+}
+
+.academic-author {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.author-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3b82f6 !important;
+  /* Blue-500 accent for author names */
+}
+
+.author-inst {
+  font-size: 0.95rem;
+  color: #a1a1aa !important;
+  /* zinc-400 */
+  margin-top: 0.25rem;
+}
+
+/* Typography elements overrides */
+.md-typeset h2 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  border-bottom: none !important;
+}
+
+.md-typeset h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.md-typeset p {
+  margin-bottom: 1.25em !important;
+}
+
+/* Rounded corners for images and videos */
+img,
+video {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Academic page footer */
+.academic-footer {
+  max-width: 50rem;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--md-divider-color);
+  padding-top: 1.5rem;
+  color: #a1a1aa !important;
+}
+
+.academic-footer a {
+  color: var(--md-typeset-a-color) !important;
+  text-decoration: none !important;
+}
+
+.academic-footer a:hover {
+  text-decoration: underline !important;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5rem;
+}
