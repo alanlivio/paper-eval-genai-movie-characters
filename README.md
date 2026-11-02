@@ -6,6 +6,7 @@ Academic paper repository and accompanying dissemination artifacts for the resea
 
 - `paper/` — LaTeX source for the academic manuscript (Springer Nature `sn-jnl` format) and submission cover letter.
 - `website/` — Project dissemination website built with Zensical.
+- `src/` — Source code, ComfyUI workflows, model configurations, and scripts to replicate the benchmark experiments.
 
 ## Usage
 

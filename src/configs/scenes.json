@@ -1,0 +1,80 @@
+{
+  "benchmark_name": "Emotion Fidelity Benchmark for AI-Generated Human Videos",
+  "hardware": {
+    "cpu": "AMD Ryzen 9 5900X",
+    "ram": "64 GB DDR4",
+    "gpu": "NVIDIA GeForce RTX 4090 (24 GB VRAM)"
+  },
+  "models": {
+    "model_A": {
+      "name": "Runway Gen-3 Alpha (Act-One / I2V)",
+      "type": "proprietary",
+      "workflow": "workflows/comfyui/runwayml_api_workflow.json"
+    },
+    "model_B": {
+      "name": "HunyuanVideo-Avatar",
+      "type": "open-source",
+      "config": "configs/hunyuan_avatar_settings.json",
+      "resolution": "832x480",
+      "video_length": 129,
+      "num_inference_steps": 30,
+      "guidance_scale": 7.5,
+      "embedded_guidance_scale": 6.0,
+      "flow_shift": 5
+    }
+  },
+  "scenes": [
+    {
+      "id": "anger",
+      "emotion": "Anger",
+      "movie": "A Few Good Men (1992)",
+      "actor": "Jack Nicholson",
+      "youtube_url": "https://www.youtube.com/watch?v=2sLcfQKU_co",
+      "reference_image": "../website/docs/images/ref_anger.png",
+      "actor_video": "../website/docs/videos/actor_anger.mp4",
+      "model_a_output": "../website/docs/videos/Model_A_anger_cleaned.mp4",
+      "model_b_output": "../website/docs/videos/Model_B_anger_cleaned.mp4",
+      "prompt": "A high-stakes courtroom showdown. The older officer erupts in fury—face red, veins bulging, fists clenched—shouting with righteous indignation. The tension is electric, the room frozen, as truth crashes down with explosive force.",
+      "target_facs_aus": ["AU4", "AU23", "AU24"]
+    },
+    {
+      "id": "encouragement",
+      "emotion": "Encouragement",
+      "movie": "Rocky Balboa (2006)",
+      "actor": "Sylvester Stallone",
+      "youtube_url": "https://www.youtube.com/watch?v=D_Vg4uyYwEk",
+      "reference_image": "../website/docs/images/ref_encouragement.png",
+      "actor_video": "../website/docs/videos/actor_encouragement.mp4",
+      "model_a_output": "../website/docs/videos/Model_A_encouragement_updated.mp4",
+      "model_b_output": "../website/docs/videos/Model_B_encoragement_updated.mp4",
+      "prompt": "A weathered man stands firm under a gray sky, delivering an emotional, motivational speech. His body is tense but composed—shoulders squared, hands gesturing with restrained power. His face shows deep intensity—brows furrowed, eyes burning with resolve and compassion. He speaks with heartfelt conviction, urging strength and resilience despite life's hardships.",
+      "target_facs_aus": ["AU1", "AU2", "AU14"]
+    },
+    {
+      "id": "joy",
+      "emotion": "Joy",
+      "movie": "Dead Poets Society (1989)",
+      "actor": "Robin Williams",
+      "youtube_url": "https://www.youtube.com/watch?v=Wey8nauEyA4",
+      "reference_image": "../website/docs/images/ref_joy.png",
+      "actor_video": "../website/docs/videos/actor_joy.mp4",
+      "model_a_output": "../website/docs/videos/Model_A_joy_cleaned.mp4",
+      "model_b_output": "../website/docs/videos/Model_B_joy_cleaned.mp4",
+      "prompt": "A passionate teacher commands attention with piercing eye contact and assertive gestures. The room crackles with suppressed defiance and emotional intensity.",
+      "target_facs_aus": ["AU6", "AU12"]
+    },
+    {
+      "id": "gratitude",
+      "emotion": "Gratitude",
+      "movie": "Good Will Hunting (1997)",
+      "actor": "Robin Williams & Matt Damon",
+      "youtube_url": "https://www.youtube.com/watch?v=8SxE_NfUX6w",
+      "reference_image": "../website/docs/images/ref_grateful.png",
+      "actor_video": "../website/docs/videos/actor_grateful.mp4",
+      "model_a_output": "../website/docs/videos/Model_A_grateful_cleaned.mp4",
+      "model_b_output": "../website/docs/videos/Model_B_grateful_cleaned.mp4",
+      "prompt": "A man speaks with tender, trembling voice. His body remains still as he is grounded by emotion. He is talking about how grateful he is with the moments he shared with his wife.",
+      "target_facs_aus": ["AU1", "AU15", "AU17"]
+    }
+  ]
+}
